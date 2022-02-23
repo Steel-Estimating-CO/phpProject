@@ -1,4 +1,4 @@
-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.10.20
 -- https://www.phpmyadmin.net
 --
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `user` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
   `userName` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(16)utf8_unicode_ci NOT NULL,
+  `password` varchar(16)COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `mobileNum` int(11) NOT NULL,
   `verified` BIT NOT NULL,

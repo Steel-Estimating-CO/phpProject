@@ -1,8 +1,5 @@
 <?php
 include ('query.php');
-
-
-
 ?>
 <html>
 <h1>
