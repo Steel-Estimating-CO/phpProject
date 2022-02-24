@@ -9,6 +9,19 @@ $_POST['Username'],
 $_POST['Usertype']);
 $stmt->execute(); 
 $newId = $stmt->insert_id;
+$FirstNameArray = array();
+$LastnameArray = array();
+$EmailArray = array();
+$UsernameArray = array();
+$UsertypeArray = array();
+while ($stmt->fetch()) 
+{
+    $FirstNameArray[]= $FirstName;
+    $LastnameArray[] = $Lastname;
+    $EmailArray[]= $Email;
+    $UsernameArray[] = $Username;
+    $UsertypeArray[]= $Usertype;
+}
 $stmt->close();
 header("Location: AdminHomepage.php?UserID=$newId");
 ?>

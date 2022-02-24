@@ -4,10 +4,7 @@ $stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype,
 $stmt->bind_param('i', $_GET["UserID"]);
 $stmt->execute(); 
 $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
-while ($stmt->fetch()) 
-{
-    echo "$Firstname, $Lastname, $Username, $Email, $Usertype, $Auth";
-}
+$stmt->fetch();
 $stmt->close();
 ?>
 
@@ -20,6 +17,19 @@ $stmt->close();
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
+
+<table style="width:100%">
+    <tr>
+        <td>Column 1</td>
+        <td>Column 2</td>
+        <td>Column 3</td>
+    </tr>
+    <tr>
+        <td>Value 1</td>
+        <td> Value 2</td>
+        <td> Value 3</td>
+    </tr>
+</table>
+
 </body>
 </html>

@@ -8,5 +8,5 @@ $_POST['Email']);
 $stmt->execute(); 
 $newId = $stmt->insert_id;
 $stmt->close();
-header("Location: AdminHomepage.php?UserID=$newId");
+header("Location: Demo1.php?UserID=$newId");
 ?>
