@@ -6,7 +6,7 @@ include ('includes/conn.inc.php');
 Steel Estimating <br> 
 </h1>
 <h2 class="title">Registration Info</h2>
-                    <form action="DemoFormProcess.php" method="POST">
+                    <form action="AdminForm.php" method="POST">
 <div class="wrap-input100" >
 <div class="input-group">
                             <input class="input--style-3" type="name" placeholder="First Name" name="Firstname">
@@ -26,13 +26,10 @@ Steel Estimating <br>
                            <input class="input--style-3" type="Email" placeholder="Email" name="Email">
                         </div>
 
-					<div class="input-group">
-                            <input class="input--style-3" type="number" placeholder="Mobile No" name="Mobile">
-                        </div>
-
-                        <div class="input-group">
-                           <input class="input--style-3" type="text" placeholder="User Type" name="Usertype">
-                        </div>
+                        <select name="Usertype" id="Usertype">
+                            <option value="Customer">Customer</option>
+                            <option value="Estimator">Estimator</option>
+                        </select>
 
 						<div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit" name="signup" > Signup </button>
