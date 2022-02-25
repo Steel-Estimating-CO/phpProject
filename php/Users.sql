@@ -38,6 +38,17 @@ CREATE TABLE `Users` (
   PRIMARY KEY (userID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+CREATE TABLE `Pending` (
+  `userID` int NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Lastname` varchar(40) NOT NULL,
+  `Email` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Username` varchar(40) NOT NULL,
+  `Usertype` varchar(40) NOT NULL,
+  `Auth` tinyint DEFAULT '0',
+  PRIMARY KEY (userID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 CREATE TABLE `Listings` (
   `userID` int NOT NULL,
   `Type` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
