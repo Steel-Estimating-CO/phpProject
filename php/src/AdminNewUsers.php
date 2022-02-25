@@ -1,8 +1,8 @@
 <?php
 include ('includes/conn.inc.php');
-$stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
+$stmt = $mysqli->prepare("SELECT UserID, Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
 $stmt->execute(); 
-$stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
+$stmt->bind_result($UserID, $Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
 
 ?>
 
@@ -42,20 +42,26 @@ $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
             echo "<td>  $Usertype </td>";
             echo "<td>";
 
-            echo "<select class=\"UserOptions\">";
-                echo "<option value=\"Accept\">Accept";
-                echo "<option value=\"Decline\">Decline";
+            echo "<Form action=\"process/acceptdecline.php\" method=\"post\">";
+            echo "<select class=\"UserOptions\" name=\"Auth\">";
+                echo "<option value=\"1\"";
+                if($Auth == 1){
+                    echo " selected";
+                }
+                echo ">Accept</option>";
+                echo "<option value=\"-1\"";
+                if($Auth == 0){
+                    echo " selected";
+                }
+                echo ">Decline</option>";
                 echo "</option>";
                 echo "</select>";
+                echo "<input type=\"hidden\" name=\"UserID\" value=\"$UserID\">";
+                echo "<input type=\"submit\">";
+                echo "</form>";
             echo "</td>";
             echo "</tr>"; 
             }
-        }
-
-
-        function AcceptUser() 
-        {
-            echo "Hello world!";
         }
     ?>
 </table>
