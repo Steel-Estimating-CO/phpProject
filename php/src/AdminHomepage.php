@@ -1,6 +1,6 @@
 <?php
     include ('includes/conn.inc.php');
-    $stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
+    $stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype, Auth FROM Users WHERE Auth=0");
     $stmt->execute();
     $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
     $stmt->store_result();
@@ -20,7 +20,6 @@
     <div class="MenuBar"></div>
     <div class="InfoBoxes">
         <?php
-                    
                     if ($numRows == 0)
                     {
                         echo "<div class=\"RowZero\">";

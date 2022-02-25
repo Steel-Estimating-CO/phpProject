@@ -34,15 +34,28 @@ $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
         {
             if ($Auth == 0)
             {
-                           echo "<tr>";
+            echo "<tr>";
             echo "<td> &emsp; $Firstname </td>";
             echo "<td> &emsp; $Lastname </td>";
             echo "<td> &emsp; $Username </td>";
             echo "<td>  $Email </td>";
             echo "<td>  $Usertype </td>";
-            echo "<td></td>";
+            echo "<td>";
+
+            echo "<select class=\"UserOptions\">";
+                echo "<option value=\"Accept\">Accept";
+                echo "<option value=\"Decline\">Decline";
+                echo "</option>";
+                echo "</select>";
+            echo "</td>";
             echo "</tr>"; 
             }
+        }
+
+
+        function AcceptUser() 
+        {
+            echo "Hello world!";
         }
     ?>
 </table>
