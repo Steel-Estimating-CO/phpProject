@@ -50,11 +50,12 @@ CREATE TABLE `Pending` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Listings` (
+  `listingID` int NOT NULL AUTO_INCREMENT,
   `userID` int NOT NULL,
   `Type` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Claimed` tinyint DEFAULT '0',
-  PRIMARY KEY (userID),
+  PRIMARY KEY (listingID),
   FOREIGN KEY (userID) REFERENCES Users(userID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
@@ -68,8 +69,10 @@ INSERT INTO `Users` (`userID`, `Firstname`, `Lastname`, `Email`, `Username`, `Us
 (26, 'Steve', 'dasas', 'lol@gmail.com', 'haha', 'Estimator', 0);
 
 
-INSERT INTO `Listings` (`userID`, `type`, `description`, `claimed`) VALUES
-(23, 'business', '1000 meter area that needs steal beams every 20 meters, I need estimations for how much steel is required for solid beams that can support up to 5 floors.', 0);
+INSERT INTO `Listings` (`listingID`,`userID`, `type`, `description`, `claimed`) VALUES
+(1,23, 'business', '1000 meter area that needs steal beams every 20 meters, I need estimations for how much steel is required for solid beams that can support up to 5 floors.', 0),
+(2,24, 'private', '300 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a house', 0);
+
 --
 -- Indexes for dumped tables
 --
