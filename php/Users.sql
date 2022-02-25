@@ -42,7 +42,9 @@ CREATE TABLE `Listings` (
   `userID` int NOT NULL,
   `type` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `claimed` tinyint DEFAULT '0'
+  `claimed` tinyint DEFAULT '0',
+  PRIMARY KEY (userID),
+  FOREIGN KEY (userID) REFERENCES Users(userID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
 -- Dumping data for table `Users`
