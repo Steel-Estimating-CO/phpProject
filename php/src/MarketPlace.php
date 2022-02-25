@@ -4,5 +4,5 @@
     $stmt->execute();
     $stmt->bind_result($userID, $Type, $Description, $Claimed);
     $stmt->store_result();
-    $numRows = $stmt->num_rows;
 ?>
+
