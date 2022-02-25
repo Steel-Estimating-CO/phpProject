@@ -1,9 +1,10 @@
 <?php
     include ('includes/conn.inc.php');
-    $stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed FROM Listings");
+    $stmt = $mysqli->prepare("SELECT listingID ,userID, Type, Description, Claimed FROM Listings WHERE listingID = ?");
+    $stmt->bind_param('i', $_GET['listingID']);
     $stmt->execute();
     $stmt->bind_result($listingID, $userID, $Type, $Description, $Claimed);
-    $stmt->store_result();
+    $stmt->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,26 +20,18 @@
 <p class="MarketPlaceHeader">Marketplace</p>
 <table class="Listings">
     <tr>
-        <th>Listing ID &emsp;</th>
         <th>User ID &emsp;</th>
         <th>Type &emsp;</th>
         <th>Description &emsp;</th>
     </tr>
     <?php
 
-        while ($stmt->fetch()) 
-        {
-            if($Claimed == 0)
-            {
             echo "<tr>";
             echo "<td> &emsp; $listingID </td>";
             echo "<td> &emsp; $userID </td>";
             echo "<td> &emsp; $Type </td>";
             echo "<td> &emsp; $Description </td>";
-            echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
             echo "</tr>";
-            } 
-        }
             ?>
 </body>
 </html>
