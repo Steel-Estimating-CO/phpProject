@@ -1,0 +1,79 @@
+html{
+    background-color: white;
+    height: 100%;
+}
+
+.MenuBar{
+    height: 100vh;
+    width: 40vh;
+    background-color: rgb(77, 85, 97);
+    border: 1px solid black;
+    float: left;
+    margin-left: -8px;
+    margin-top: -10px;
+}
+
+.InfoBoxes{
+    height: 20vh;
+    width: 25vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 60px;
+}
+
+.ProfilePic{
+    height: 30vh;
+    width: 25vh;
+    border: 1px solid black;
+    float: right;
+    margin-right: 30px;
+    margin-top: 60px;
+}
+
+.UploadPhoto{
+    height: 7vh;
+    width: 25vh;
+    border: 1px solid black;
+    margin-top: 230px;
+    float: right;
+    position: fixed;
+    background-color: rgb(0, 148, 0);
+}
+
+.UploadText{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 13px;
+    color: rgb(255, 255, 255);
+}
+
+.UploadPhoto:hover{
+    background-color: rgb(0, 96, 0);
+}
+
+.ProfileInfo{
+    height: 65vh;
+    width: 80vh;
+    border: 1px solid black;
+    float: left;
+    margin-top: 10px;
+}
+
+.ProfileDesc{
+    height: 40vh;
+    width: 73vh;
+    border: 1px solid black;
+    float: right;
+    margin-top: 16vh;
+}
+
+.RowZero{
+    color: grey;
+    font-size: 100px;
+}
+
+.RowExtends{
+    color: blue;
+    font-size: 100px;
+}

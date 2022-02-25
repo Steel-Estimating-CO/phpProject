@@ -1,11 +1,10 @@
 <?php
-include ('includes/conn.inc.php');
-$stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype, Auth FROM Users WHERE UserID = ?");
-$stmt->bind_param('i', $_GET["UserID"]);
-$stmt->execute(); 
-$stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
-$stmt->fetch();
-$stmt->close();
+    include ('includes/conn.inc.php');
+    $stmt = $mysqli->prepare("SELECT Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
+    $stmt->execute();
+    $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
+    $stmt->store_result();
+    $numRows = $stmt->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -14,22 +13,33 @@ $stmt->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="AdminLayout.css" type="text/css">
+    <title>Admin Homepage</title>
 </head>
 <body>
-
-<table style="width:100%">
-    <tr>
-        <td>Column 1</td>
-        <td>Column 2</td>
-        <td>Column 3</td>
-    </tr>
-    <tr>
-        <td>Value 1</td>
-        <td> Value 2</td>
-        <td> Value 3</td>
-    </tr>
-</table>
-
+    <div class="MenuBar"></div>
+    <div class="InfoBoxes">
+        <?php
+                    
+                    if ($numRows == 0)
+                    {
+                        echo "<div class=\"RowZero\">";
+                    }
+                    else
+                    {
+                        echo "<div class=\"RowExtends\">";
+                    }
+                    echo $numRows;
+                    echo "</div>";
+        ?>
+    </div>
+    <div class="InfoBoxes"></div>
+    <div class="InfoBoxes"></div>
+    <div class="InfoBoxes"></div>
+    <div class="ProfilePic">
+    <div class="UploadPhoto"> <p class="UploadText">Upload Image</p></div>
+    </div>
+    <div class="ProfileInfo"></div>
+    <div class="ProfileDesc"></div>
 </body>
 </html>
