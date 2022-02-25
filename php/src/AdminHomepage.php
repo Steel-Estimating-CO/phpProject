@@ -32,6 +32,7 @@
                     echo $numRows;
                     echo "</div>";
         ?>
+        <p>User Approvals</p>
     </div>
     <div class="InfoBoxes"></div>
     <div class="InfoBoxes"></div>

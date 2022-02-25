@@ -12,32 +12,39 @@ $stmt->bind_result($Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AdminLayout.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
 
-<table>
+<div class="MenuBar"></div>
+<p class="NewUserHeader">New Users:</p>
+<table class="NewUserTable">
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-        <th>Email Address</th>
-        <th>User Type</th>
-        <th>Authenticated</th>
+        <th>First Name &emsp;</th>
+        <th>Last Name &emsp;</th>
+        <th>Username &emsp;</th>
+        <th>Email Address &emsp;</th>
+        <th>User Type &emsp;</th>
+        <th>Authenticated &emsp;</th>
     </tr>
-<?php
-    while ($stmt->fetch()) 
-{
-    echo "<tr>";
-    echo "<td> &emsp; $Firstname </td>";
-    echo "<td> &emsp; $Lastname </td>";
-    echo "<td> &emsp; $Username </td>";
-    echo "<td> &emsp; $Email </td>";
-    echo "<td> &emsp; $Usertype </td>";
-    echo "<td> &emsp; $Auth </td>";
-    echo "</tr>";
-}
-?>
+    <?php
+
+        while ($stmt->fetch()) 
+        {
+            if ($Auth == 0)
+            {
+                           echo "<tr>";
+            echo "<td> &emsp; $Firstname </td>";
+            echo "<td> &emsp; $Lastname </td>";
+            echo "<td> &emsp; $Username </td>";
+            echo "<td>  $Email </td>";
+            echo "<td>  $Usertype </td>";
+            echo "<td></td>";
+            echo "</tr>"; 
+            }
+        }
+    ?>
 </table>
 
 </body>
