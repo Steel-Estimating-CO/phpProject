@@ -102,9 +102,10 @@ td, th{
 }
 
 .NewUserHeader{
-    margin-left: 53vh;
+    margin-left: 45vh;
     margin-top: -1px;
     font-size: 5vh;
+    color: rgb(94, 94, 94);
 }
 
 .MenuOptions1{
@@ -147,20 +148,50 @@ td, th{
     text-align: center;
 }
 
+.DescBox{
+    height: 30vh;
+    width: 130vh;
+    margin-left: 70px;
+    margin-top: -15px;
+    border: 1px solid black;
+}
+
 .CInfo{
     font-size: 20px;
 }
 
 .ClientInfo{
     color: rgb(47, 0, 255);
+    margin-top: -20px;
 }
 
 .ClientSubject{
-    margin-top: 50px;
     font-size: 20px;
     text-align: left;
+    padding-left: 70px;
 }
 
 .ClientSub{
     text-align: left;
+    padding-left: 5px;
+}
+
+.CompOption{
+    height: 10vh;
+    width: 35vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.CompOption:hover{
+    cursor: pointer;
+    background-color: rgb(186, 186, 186);
+}
+
+.CompText{
+    margin-top: 25px;
+    font-size: 3vh;
 }

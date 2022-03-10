@@ -33,7 +33,7 @@ $stmt->store_result();
 <form action="" method="get" id="filterForm">
 <select name="Filter" id="Filter">
         <option value="All" <?php echo ($filter == "All") ? 'selected' : ''; ?>>All Complaints</option>
-        <option value="JobPosting "<?php echo ($filter == "JobPosting") ? 'selected' : ''; ?>>Job Posting</option>
+        <option value="JobPosting" <?php echo ($filter == "JobPosting") ? 'selected' : ''; ?>>Job Posting</option>
         <option value="Payments" <?php echo ($filter == "Payments") ? 'selected' : ''; ?>>Payments</option>
         <option value="Other" <?php echo ($filter == "Other") ? 'selected' : ''; ?>>Other</option>
 </select>
