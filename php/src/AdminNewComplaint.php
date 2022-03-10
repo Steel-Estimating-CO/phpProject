@@ -1,6 +1,8 @@
 <?php
 include ('includes/conn.inc.php');
-$stmt = $mysqli->prepare("SELECT CaseID, UserID, UserDate, UserEmail, Category, UserSubject, Complete FROM Complaints");
+$filter = $_GET["Filter"];
+$stmt = $mysqli->prepare("SELECT CaseID, UserID, UserDate, UserEmail, Category, UserSubject, Complete FROM Complaints WHERE Category = ?");
+$stmt->bind_param('s', $filter);
 $stmt->execute(); 
 $stmt->bind_result($CaseID, $UserID, $UserDate, $UserEmail, $Category, $UserSubject, $Complete);
 $stmt->store_result();
@@ -20,13 +22,14 @@ $stmt->store_result();
 <div class="MenuBar"></div>
 <p class="NewUserHeader">New Complaint:</p>
 
+<form action="" method="get" id="filterForm">
 <select name="Filter" id="Filter">
         <option value="All">All Complaints</option>
         <option value="JobPosting">Job Posting</option>
         <option value="Payment">Payment</option>
         <option value="Other">Other</option>
 </select>
-
+</form>
 <table class="NewUserTable">
     <tr>
         <th>UserID &emsp;</th>
@@ -54,4 +57,10 @@ $stmt->store_result();
 </table>
 
 </body>
+<script>
+document.getElementById("Filter").addEventListener("change", function(){
+    document.getElementById("FilterForm").submit();
+})
+
+</script>
 </html>
