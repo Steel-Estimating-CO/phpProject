@@ -34,7 +34,7 @@ $stmt->store_result();
 <select name="Filter" id="Filter">
         <option value="All">All Complaints</option>
         <option value="JobPosting">Job Posting</option>
-        <option value="Payment">Payment</option>
+        <option value="Payments">Payments</option>
         <option value="Other">Other</option>
 </select>
 </form>
