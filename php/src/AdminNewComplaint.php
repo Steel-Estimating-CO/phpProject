@@ -67,7 +67,7 @@ $stmt->store_result();
 </body>
 <script>
 document.getElementById("Filter").addEventListener("change", function(){
-    document.getElementById("FilterForm").submit();
+    document.getElementById("filterForm").submit();
 })
 
 </script>
