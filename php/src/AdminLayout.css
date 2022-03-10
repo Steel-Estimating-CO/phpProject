@@ -138,3 +138,29 @@ td, th{
 .MenuTxt{
     padding-top: 10px;
 }
+
+.CTemplate{
+    height: 85vh;
+    width: 150vh;
+    border: 1px solid black;
+    margin-left: 310px;
+    text-align: center;
+}
+
+.CInfo{
+    font-size: 20px;
+}
+
+.ClientInfo{
+    color: rgb(47, 0, 255);
+}
+
+.ClientSubject{
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.ClientSub{
+    text-align: left;
+}

@@ -19,23 +19,22 @@ $stmt->fetch();
 <body>
 
 <div class="MenuBar"></div>
-<p class="NewUserHeader">New Complaint:</p>
-<table class="NewUserTable">
-    <tr>
-        <th>UserID &emsp;</th>
-        <th>Date &emsp;</th>
-        <th>User Email &emsp;</th>
-        <th>Category &emsp;</th>
-        <th>Subject &emsp;</th>
-    </tr>
-    <?php
-        echo "<td> &emsp; $UserID </td>";
-        echo "<td> &emsp; $UserDate </td>";
-        echo "<td> &emsp; $UserEmail </td>";
-        echo "<td>  $Category </td>";
-        echo "<td> &emsp; $UserSubject </td>";
-    ?>
-</table>
+<p class="NewUserHeader">User Complaint:</p>
+<div class="CTemplate">
+
+<?php
+
+    echo "<p class=\"CInfo\">UserID</p>";
+    echo "<p class=\"ClientInfo\">$UserID</p>";
+    echo "<p class=\"CInfo\">Email Address</p>";
+    echo "<p class=\"ClientInfo\">$UserEmail</p>";
+    echo "<p class=\"CInfo\">Category</p>";
+    echo "<p class=\"ClientInfo\">$Category</p>";
+    echo "<p class=\"ClientSubject\">Subject</p>";
+    echo "<p class=\"ClientSub\">$UserSubject</p>";
+?>
+
+</div>
 
 </body>
 </html>
