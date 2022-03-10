@@ -50,6 +50,7 @@ html{
 
 .UploadPhoto:hover{
     background-color: rgb(0, 96, 0);
+    cursor: pointer;
 }
 
 .ProfileInfo{
@@ -80,10 +81,12 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p{
+.AdminInfo{
     font-size: 3vh;
     margin-top: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 .NewUserTable{
@@ -95,10 +98,43 @@ p{
 
 td, th{
     border: 1px solid black;
-    padding: 8px;
+    padding: 10px 35px;
 }
 
 .NewUserHeader{
     margin-left: 53vh;
+    margin-top: -1px;
     font-size: 5vh;
+}
+
+.MenuOptions1{
+    margin-top: 200px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions{
+    margin-top: 10px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions1:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuOptions:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuTxt{
+    padding-top: 10px;
 }

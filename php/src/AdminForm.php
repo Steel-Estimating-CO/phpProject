@@ -1,14 +1,14 @@
 <?php
 include ('includes/conn.inc.php');
 $stmt = $mysqli->prepare("INSERT INTO Users(Firstname, Lastname, Email, Username, Usertype) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param('sssss', 
-$_POST['Firstname'], 
-$_POST['Lastname'], 
+$stmt->bind_param('sssss',
+$_POST['Firstname'],
+$_POST['Lastname'],
 $_POST['Email'],
 $_POST['Username'],
 $_POST['Usertype']);
-$stmt->execute(); 
+$stmt->execute();
 $newId = $stmt->insert_id;
 $stmt->close();
-header("Location: AdminNewUsers.php?UserID=$newId");
+header("Location: AdminHomepage.php?UserID=$newId");
 ?>
