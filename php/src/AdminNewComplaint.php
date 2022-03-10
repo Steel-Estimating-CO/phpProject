@@ -1,6 +1,6 @@
 <?php
 include ('includes/conn.inc.php');
-if(!isset($_GET["filter"]){
+if(!isset($_GET["filter"])){
     $filter = "All";
 }else{
     $filter = $_GET["Filter"];
