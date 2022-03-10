@@ -1,5 +1,5 @@
 <?php
-    include ('includes/conn.inc.php');
+include ('includes/conn.inc.php');
     $stmt = $mysqli->prepare("SELECT listingID ,userID, Type, Description, Claimed FROM Listings WHERE listingID = ?");
     $stmt->bind_param('i', $_GET['listingID']);
     $stmt->execute();

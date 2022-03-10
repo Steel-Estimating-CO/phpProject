@@ -3,7 +3,6 @@ include ('includes/conn.inc.php');
 $stmt = $mysqli->prepare("SELECT UserID, Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
 $stmt->execute(); 
 $stmt->bind_result($UserID, $Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
-
 ?>
 
 <!DOCTYPE html>

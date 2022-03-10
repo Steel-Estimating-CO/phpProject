@@ -13,11 +13,11 @@ Steel Estimating <br>
     </div>
 </div>
     <div class="input-group">
-        <input class="input--style-3" type="name" placeholder="LastName" name="Lastname">
+        <input class="input--style-3" type="name" placeholder="Last Name" name="Lastname">
     </div>
 
 	<div class="input-group">
-        <input class="input--style-3" type="Username" placeholder="UserName" name="Username">
+        <input class="input--style-3" type="Username" placeholder="User Name" name="Username">
     </div>
 
 	<div class="input-group">

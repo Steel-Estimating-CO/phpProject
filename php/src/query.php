@@ -39,4 +39,27 @@ if ($connect){
 		echo "Register Failed";
 	}
 }
+
+//submit
+if (isset($_POST['submit'])) {
+
+	$UserID=$_POST['UserID'];
+	$UserDate=$_POST['UserDate'];
+	$UserEmail=$_POST['UserEmail'];
+	$Category=$_POST['Category'];
+	$UserSubject=$_POST['UserSubject'];
+	
+	$sql = "INSERT INTO `Complaints` (`UserID`, `UserDate`, `UserEmail`, `Category`, `UserSubject`) VALUES ('$UserID', '$UserDate', '$UserEmail', '$Category', '$UserSubject')";
+	echo "$sql";
+	$query = mysqli_query($con, $sql);
+	if ($query) {
+
+		echo "<script> alert('User Register Successfully'); 
+		window.location.href = 'AdminHomepage.php';</script>"; 
+	}
+	else
+	{
+		echo "Complaint Failed";
+	}
+}
 ?>
