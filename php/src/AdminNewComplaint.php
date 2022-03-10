@@ -1,8 +1,16 @@
 <?php
 include ('includes/conn.inc.php');
-$filter = $_GET["Filter"];
-$stmt = $mysqli->prepare("SELECT CaseID, UserID, UserDate, UserEmail, Category, UserSubject, Complete FROM Complaints WHERE Category = ?");
-$stmt->bind_param('s', $filter);
+if(!isset($_GET["filter"]){
+    $filter = "All";
+}else{
+    $filter = $_GET["Filter"];
+}
+if($filter == "All"){
+    $stmt = $mysqli->prepare("SELECT CaseID, UserID, UserDate, UserEmail, Category, UserSubject, Complete FROM Complaints");
+}else{
+    $stmt = $mysqli->prepare("SELECT CaseID, UserID, UserDate, UserEmail, Category, UserSubject, Complete FROM Complaints WHERE Category = ?");
+    $stmt->bind_param('s', $filter);
+}
 $stmt->execute(); 
 $stmt->bind_result($CaseID, $UserID, $UserDate, $UserEmail, $Category, $UserSubject, $Complete);
 $stmt->store_result();
