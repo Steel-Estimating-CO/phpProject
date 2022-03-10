@@ -15,14 +15,18 @@
     <title>Document</title>
 </head>
 <body>
+<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="MarketPlace.php">MarketPlace</a></li>
+      </ul>
 <div class="MenuBar"></div>
-<p class="MarketPlaceHeader">Marketplace</p>
 <table class="Listings">
     <tr>
         <th>Listing ID &emsp;</th>
         <th>User ID &emsp;</th>
         <th>Type &emsp;</th>
         <th>Description &emsp;</th>
+        </form>
     </tr>
     <?php
 
@@ -36,6 +40,7 @@
             echo "<td> &emsp; $Type </td>";
             echo "<td> &emsp; $Description </td>";
             echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
+            echo "<td>Claim";
             echo "</tr>";
             } 
         }
