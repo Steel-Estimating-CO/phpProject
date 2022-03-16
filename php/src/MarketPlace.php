@@ -26,7 +26,6 @@ include ('includes/conn.inc.php');
         <th>User ID &emsp;</th>
         <th>Type &emsp;</th>
         <th>Description &emsp;</th>
-        </form>
     </tr>
     <?php
 
@@ -40,9 +39,10 @@ include ('includes/conn.inc.php');
             echo "<td> &emsp; $Type </td>";
             echo "<td> &emsp; $Description </td>";
             echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
-            echo "<td>Claim";
+            echo "<td><input type ='button' name ='claim' value ='claim' formaction=\"process/claim.php\" method=\"post\"></td>";
             echo "</tr>";
             } 
+
         }
             ?>
 </body>
