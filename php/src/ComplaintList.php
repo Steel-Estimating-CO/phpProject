@@ -15,6 +15,17 @@ $stmt->fetch();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AdminLayout.css" type="text/css">
     <title>Document</title>
+    <style>
+        .resolvedBtnRed{
+            background-color: #f00;
+            color:#fff;
+        }
+        .resolvedBtnGreen{
+            background-color: #50C878;
+            color:#fff; 
+        }
+
+    </style>
 </head>
 <body>
 
@@ -36,9 +47,19 @@ $stmt->fetch();
 ?>
 
 <?php
-    echo "<Form action=\"process/ResolvedUnresolved.php\" method=\"post\">";
-    echo "<div class=\"CompOption\" value=\"1\" name=\"Complete\"><p class=\"CompText\">Resolved</p></div>";
+    echo "<Form action=\"process/ResolvedUnresolved.php\" method=\"post\" id=\"resolveForm\">";
+    // not sure of the business logic but example
+    if($Complete == 0){
+        $newCompleteVal = 1;
+        $btnClass = "resolvedBtnRed";
+    }
+    if($Complete == 1){
+        $newCompleteVal = -1;
+        $btnClass = "resolvedBtnGreen";
+    }
+    echo "<div class=\"CompOption $btnClass\" ><p class=\"CompText\" id=\"resolveBtn\">Resolved</p></div>";
     echo "<input type=\"hidden\" name=\"CaseID\" value=\"$CaseID\">";
+    echo "<input type=\"hidden\" name=\"Complete\" value=\"$newCompleteVal\">";
     echo "</form>";
 ?>
 
@@ -47,5 +68,17 @@ $stmt->fetch();
 <div class="CompOption"><p class="CompText">Unresolved</p></div>
 
 </div>
+<script>
+(function(){
+var resolveBtn = document.getElementById("resolveBtn");
+var resolveForm = document.getElementById("resolveForm");
+resolveBtn.addEventListener("click", function(ev){
+    resolveForm.submit();
+})
+
+})()
+
+
+</script>
 </body>
 </html>
