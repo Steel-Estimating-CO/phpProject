@@ -39,7 +39,9 @@ include ('includes/conn.inc.php');
             echo "<td> &emsp; $Type </td>";
             echo "<td> &emsp; $Description </td>";
             echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
-            echo "<td><input type ='button' name ='claim' value ='claim' formaction=\"process/claim.php\" method=\"post\"></td>";
+            echo "<td><input type ='button' name ='claim' value ='claim' formaction=\"process/claim.php\" method=\"post\">";
+            echo "<input type=\"hidden\" name=\"UserID\" value=\"$userID\">";
+            echo "</td>";
             echo "</tr>";
             } 
 
