@@ -1,9 +1,10 @@
 <?php
 include ('includes/conn.inc.php');
-    $stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed FROM Listings");
+    $stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed FROM Listings WHERE Claimed = 0");
     $stmt->execute();
     $stmt->bind_result($listingID, $userID, $Type, $Description, $Claimed);
     $stmt->store_result();
+    $numRows = $stmt->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,10 @@ include ('includes/conn.inc.php');
         <li><a href="MarketPlace.php">MarketPlace</a></li>
       </ul>
 <div class="MenuBar"></div>
+
+<?php
+if($numRows > 0){
+?>
 <table class="Listings">
     <tr>
         <th>Listing ID &emsp;</th>
@@ -31,21 +36,32 @@ include ('includes/conn.inc.php');
 
         while ($stmt->fetch()) 
         {
-            if($Claimed == 0)
-            {
             echo "<tr>";
             echo "<td> &emsp; $listingID </td>";
             echo "<td> &emsp; $userID </td>";
             echo "<td> &emsp; $Type </td>";
             echo "<td> &emsp; $Description </td>";
             echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
-            echo "<td><input type ='button' name ='claim' value ='claim' formaction=\"process/claim.php\" method=\"post\">";
+            echo "<td><form action=\"process/claim.php\" method=\"post\">";
+            echo "<input type=\"hidden\" name=\"Claimed\" value=\"1\">";
             echo "<input type=\"hidden\" name=\"UserID\" value=\"$userID\">";
-            echo "</td>";
+            echo "<input type=\"submit\" value=\"Claim\">";
+            echo "</form></td>";
             echo "</tr>";
-            } 
 
         }
             ?>
+
+    </table>
+
+<?php
+}else{
+    echo "<p>Nothing to claim.</p>";
+}
+?>
+
+<script>
+    
+</script>
 </body>
 </html>
