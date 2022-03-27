@@ -1,8 +1,8 @@
 <?php
 include ('includes/conn.inc.php');
-    $stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed FROM Listings WHERE Claimed = 0");
+    $stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed, estimatorID FROM Listings WHERE Claimed = 0");
     $stmt->execute();
-    $stmt->bind_result($listingID, $userID, $Type, $Description, $Claimed);
+    $stmt->bind_result($listingID, $userID, $Type, $Description, $Claimed,$estimatorID);
     $stmt->store_result();
     $numRows = $stmt->num_rows;
 ?>
@@ -44,7 +44,7 @@ if($numRows > 0){
             echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
             echo "<td><form action=\"process/claim.php\" method=\"post\">";
             echo "<input type=\"hidden\" name=\"Claimed\" value=\"1\">";
-            echo "<input type=\"hidden\" name=\"UserID\" value=\"$userID\">";
+            echo "<input type=\"hidden\" name=\"userID\" value=\"$userID\">";
             echo "<input type=\"submit\" value=\"Claim\">";
             echo "</form></td>";
             echo "</tr>";
