@@ -48,6 +48,7 @@ INSERT INTO `Listings` (`userID`, `type`, `description`, `claimed`) VALUES
 CREATE TABLE `Complaints` (
   `caseID` int NOT NULL,
   `UserID` int NOT NULL,
+  `Password` varchar(40) NOT NULL,
   `UserDate` varchar(40) NOT NULL,
   `UserEmail` varchar(40) NOT NULL,
   `Category` varchar(40) NOT NULL,
@@ -91,20 +92,13 @@ INSERT INTO `Users` (`userID`, `Firstname`, `Lastname`, `Email`, `Username`, `Us
 (57, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
 (58, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
 (59, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(60, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', 0),
+(60, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer',  0),
 (61, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(62, '', '', '', '', 'Customer', -1),
-(63, '', '', '', '', 'Customer', -1),
-(64, '', '', '', '', 'Customer', -1),
-(65, '', '', '', '', 'Customer', -1),
-(66, '', '', '', '', 'Customer', -1),
 (67, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', -1),
 (68, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
 (69, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
 (70, 'Matt', 'dasas', 'lol@gmail.com', 'haha', 'Customer', 0),
-(71, 'Matt', 'dasas', 'dasdsad@dsadas', 'haha', 'Customer', 0),
-(72, '', '', '', '', 'Customer', -1),
-(73, '', '', '', '', 'Customer', -1);
+(71, 'Matt', 'dasas', 'dasdsad@dsadas', 'haha', 'Customer', 0);
 
 --
 -- Indexes for dumped tables
