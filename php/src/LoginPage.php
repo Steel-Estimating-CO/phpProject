@@ -2,7 +2,7 @@
 include ('includes/conn.inc.php');
     session_start();
     if(isset($_SESSION["loggedin"])&& $_SESSION["loggedin"] === true){  
-        header("location: Welcome.php");
+        header("location: index.php");
         exit;
      //  add switch case here
     }
