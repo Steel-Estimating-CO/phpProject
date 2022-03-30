@@ -12,14 +12,15 @@ include ('includes/conn.inc.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="MarketPlaceLayout.css" type="text/css">
+    <link rel="stylesheet" href="AdminLayout.css" type="text/css">
+    <link rel="stylesheet" href="indexLayout.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
-<ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="MarketPlace.php">MarketPlace</a></li>
-      </ul>
+<ul class = "ul">
+  <li class ="li a"><a class="li" a href="Index.php">Index page</a></li>
+  <li class = "li a"><a href ="EstimatorHomepage.php"> Estimator Tab </a>
+</ul>
 <div class="MenuBar"></div>
 
 <?php

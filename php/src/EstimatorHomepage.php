@@ -14,15 +14,13 @@
     <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
     <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
     </div>
-
-    </div>
     <div class="ProfilePic">
     <div class="UploadPhoto"> <p class="UploadText">Upload Image</p></div>
     </div>
     <div class="ProfileInfo"> 
         <p class = "AdminInfo">Name: Matthew Gaffor </p>
         <p class = "AdminInfo">Email: mattg@gmail.com </p>
-        <p class = "AdminInfo">Registration date: 27/03/2022 </p>
+        <p class = "AdminInfo">Registration date: 27/03/2022 </p>   
 </div>
 </body>
 </html>
