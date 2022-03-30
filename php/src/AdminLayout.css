@@ -141,6 +141,16 @@ td, th{
     font-size: 20px;
 }
 
+.MenuTitle
+{
+        font-size: 30px;
+        margin-top: 15px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+}
+
 .ClientInfo{
     color: rgb(47, 0, 255);
     margin-top: -20px;

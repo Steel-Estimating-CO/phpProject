@@ -16,12 +16,17 @@ include ('includes/conn.inc.php');
     <title>Document</title>
 </head>
 <body>
-<div class="MenuBar"></div>
-<table class="Listings">
+<div class="MenuBar">
+    <div class="MenuOptions1" onclick="location.href='EstimatorHomepage.php'"><p class="MenuTxt">My Profile</p></div>
+    <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
+    <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
+    <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
+    </div>
+<table>
     <tr>
-        <th>User ID &emsp;</th>
         <th>Type &emsp;</th>
         <th>Description &emsp;</th>
+        <th>Files </th>
     </tr>
     <?php
 
@@ -29,7 +34,6 @@ include ('includes/conn.inc.php');
             echo "<td> &emsp; $listingID </td>";
             echo "<td> &emsp; $userID </td>";
             echo "<td> &emsp; $Type </td>";
-            echo "<td> &emsp; $Description </td>";
             echo "</tr>";
             ?>
 </body>
