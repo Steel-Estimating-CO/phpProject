@@ -15,17 +15,6 @@ $stmt->fetch();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AdminLayout.css" type="text/css">
     <title>Document</title>
-    <style>
-        .resolvedBtnRed{
-            background-color: #f00;
-            color:#fff;
-        }
-        .resolvedBtnGreen{
-            background-color: #50C878;
-            color:#fff; 
-        }
-
-    </style>
 </head>
 <body>
 
@@ -48,16 +37,13 @@ $stmt->fetch();
 
 <?php
     echo "<Form action=\"process/ResolvedUnresolved.php\" method=\"post\" id=\"resolveForm\">";
-    // not sure of the business logic but example
     if($Complete == 0){
         $newCompleteVal = 1;
-        $btnClass = "resolvedBtnRed";
     }
-    if($Complete == 1){
-        $newCompleteVal = -1;
-        $btnClass = "resolvedBtnGreen";
+    if($Complete == 2){
+        $newCompleteVal = 1;
     }
-    echo "<div class=\"CompOption $btnClass\" ><p class=\"CompText\" id=\"resolveBtn\">Resolved</p></div>";
+    echo "<div class=\"CompOption\" ><p class=\"CompText\" id=\"resolveBtn\">Resolved</p></div>";
     echo "<input type=\"hidden\" name=\"CaseID\" value=\"$CaseID\">";
     echo "<input type=\"hidden\" name=\"Complete\" value=\"$newCompleteVal\">";
     echo "</form>";
@@ -65,9 +51,23 @@ $stmt->fetch();
 
 
 <div class="CompOption"><p class="CompText">Send Email</p></div>
-<div class="CompOption"><p class="CompText">Unresolved</p></div>
+
+<?php
+    echo "<Form action=\"process/ResolvedUnresolved.php\" method=\"post\" id=\"unresolveForm\">";
+    if($Complete == 0){
+        $newCompleteVal = 2;
+    }
+    if($Complete == 2){
+        $newCompleteVal = 2;
+    }
+    echo "<div class=\"CompOption\"><p class=\"CompText\" id=\"UnresolvedBtn\">UnResolved</p></div>";
+    echo "<input type=\"hidden\" name=\"CaseID\" value=\"$CaseID\">";
+    echo "<input type=\"hidden\" name=\"Complete\" value=\"$newCompleteVal\">";
+    echo "</form>";
+?>
 
 </div>
+
 <script>
 (function(){
 var resolveBtn = document.getElementById("resolveBtn");
@@ -77,8 +77,17 @@ resolveBtn.addEventListener("click", function(ev){
 })
 
 })()
+</script>
 
+<script>
+    (function(){
+var UnresolvedBtn = document.getElementById("UnresolvedBtn");
+var unresolveForm = document.getElementById("unresolveForm");
+UnresolvedBtn.addEventListener("click", function(ev){
+    unresolveForm.submit();
+})
 
+})()
 </script>
 </body>
 </html>

@@ -23,42 +23,22 @@ html{
 }
 
 .ProfilePic{
-    height: 30vh;
-    width: 25vh;
+    height: 35vh;
+    width: 30vh;
     border: 1px solid black;
     float: right;
     margin-right: 30px;
-    margin-top: 60px;
-}
-
-.UploadPhoto{
-    height: 7vh;
-    width: 25vh;
-    border: 1px solid black;
-    margin-top: 230px;
-    float: right;
-    position: fixed;
-    background-color: rgb(0, 148, 0);
-}
-
-.UploadText{
-    text-align: center;
-    font-size: 22px;
-    margin-top: 13px;
-    color: rgb(255, 255, 255);
-}
-
-.UploadPhoto:hover{
-    background-color: rgb(0, 96, 0);
-    cursor: pointer;
+    margin-top: 10px;
+    background-image: url("userpicture.png");
+    background-color: #cccccc;
+    background-size: 110px;
 }
 
 .ProfileInfo{
     height: 65vh;
     width: 80vh;
-    border: 1px solid black;
     float: left;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .ProfileDesc{
@@ -66,7 +46,8 @@ html{
     width: 73vh;
     border: 1px solid black;
     float: right;
-    margin-top: 16vh;
+    margin-top: 10vh;
+    margin-right: 20px;
 }
 
 .RowZero{
@@ -194,4 +175,19 @@ td, th{
 .CompText{
     margin-top: 25px;
     font-size: 3vh;
+}
+
+.Itxt{
+    height: 30px;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(106, 106, 106);
+    font-size: 18px;
+}
+
+.Ilbl{
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
 }

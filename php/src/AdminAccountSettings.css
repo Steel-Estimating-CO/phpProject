@@ -1,0 +1,130 @@
+html{
+    background-color: white;
+    height: 100%;
+}
+
+.MenuBar{
+    height: 100vh;
+    width: 40vh;
+    background-color: rgb(77, 85, 97);
+    border: 1px solid black;
+    float: left;
+    margin-left: -8px;
+    margin-top: -10px;
+}
+
+.ProfilePic{
+    height: 25vh;
+    width: 25vh;
+    border: 1px solid black;
+    float: left;
+    margin-left: -220px;
+    border-radius: 70%;
+    margin-top: 60px;
+    background-image: url("userpicture.png");
+    background-color: #cccccc;
+    background-size: 50px;
+}
+
+.UploadPhoto{
+    height: 7vh;
+    width: 40vh;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-top: 60px;
+    background-color: white;
+}
+
+.UploadText{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 13px;
+    color: rgb(99, 99, 99);
+}
+
+.UploadPhoto:hover{
+    background-color: rgb(225, 225, 225);
+    cursor: pointer;
+}
+
+.ProfileInfo{
+    height: 60vh;
+    width: 130vh;
+    float: left;
+    margin-top: 200px;
+}
+
+.AdminInfo{
+    font-size: 3vh;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.MenuOptions1{
+    margin-top: 200px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions{
+    margin-top: 10px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions1:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuOptions:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuTxt{
+    padding-top: 10px;
+}
+
+h1{
+    margin-top: 10px;
+    margin-left: 30px;
+    color: rgb(92, 92, 92);
+    float: left;
+}
+
+.Itxt{
+    height: 30px;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(106, 106, 106);
+}
+
+.Ilbl{
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.Sbtn{
+    height: 50px;
+    width: 150px;
+    margin-left: 250px;
+    margin-top: 40px;
+}
+
+.Cbtn{
+    height: 50px;
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 40px;
+}

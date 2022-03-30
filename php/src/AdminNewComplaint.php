@@ -60,6 +60,16 @@ $stmt->store_result();
                 echo "<td> <a href=\"ComplaintList.php?CaseID=$CaseID\">Expand</a></td>";
                 echo "</tr>"; 
             }
+            if ($Complete == 2)
+            {
+                echo "<tr>";
+                echo "<td style=\"background-color: red\"> &emsp; $UserID </td>";
+                echo "<td style=\"background-color: red\"> &emsp; $UserDate </td>";
+                echo "<td style=\"background-color: red\"> &emsp; $UserEmail </td>";
+                echo "<td style=\"background-color: red\">  $Category </td>";
+                echo "<td style=\"background-color: red\"> <a href=\"ComplaintList.php?CaseID=$CaseID\">Expand</a></td>";
+                echo "</tr>"; 
+            }
         }
     ?>
 </table>
