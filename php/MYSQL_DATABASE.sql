@@ -73,7 +73,7 @@ CREATE TABLE `Listings` (
   `Claimed` tinyint DEFAULT '0',
   `estimatorID` int NOT NULL,
   PRIMARY KEY (listingID),
-  FOREIGN KEY (userID) REFERENCES Users(userID)
+  FOREIGN KEY (userID) REFERENCES Users(userID),
   FOREIGN KEY (estimatorID) REFERENCES Users(userID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
