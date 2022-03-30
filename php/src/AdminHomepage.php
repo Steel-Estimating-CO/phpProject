@@ -92,12 +92,12 @@ $numOfRows = $stmt->num_rows;
     </div>
     <div class="ProfileInfo">
     <form method="post">
-    <label class="Ilbl">User ID Number:</label><input class="Itxt" type="text" name="UserID" placeholder="UserID" value="<?php echo $row['UserID']; ?>"><br/><br/>
-    <label class="Ilbl">First Name: &nbsp &nbsp &nbsp &nbsp </label><input class="Itxt" type="text" name="Firstname" placeholder="Firstname" value="<?php echo $row['Firstname']; ?>"><br/><br/>
-    <label class="Ilbl">Surname: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   </label><input class="Itxt" type="text" name="Lastname" placeholder="Lastname" value="<?php echo $row['Lastname']; ?>"><br/><br/>
-    <label class="Ilbl">Username: &nbsp &nbsp &nbsp &nbsp &nbsp   </label><input class="Itxt" type="text" name="Username" placeholder="Username" value="<?php echo $row['Username']; ?>"><br/><br/>
-    <label class="Ilbl">Email Address: &nbsp </label><input class="Itxt" type="text" name="Email" placeholder="Email" value="<?php echo $row['Email']; ?>"><br/><br/>
-    <label class="Ilbl">User Type: &nbsp &nbsp &nbsp &nbsp &nbsp</label><input class="Itxt" type="text" name="Usertype" placeholder="Usertype" value="<?php echo $row['Usertype']; ?>"><br/><br/>
+    <label class="Ilbl">User ID Number:</label><input class="Itxt" type="text" name="UserID" placeholder="UserID" value="<?php echo $row['UserID']; ?>" readonly><br/><br/>
+    <label class="Ilbl">First Name: &nbsp &nbsp &nbsp &nbsp </label><input class="Itxt" type="text" name="Firstname" placeholder="Firstname" value="<?php echo $row['Firstname']; ?>" readonly><br/><br/>
+    <label class="Ilbl">Surname: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   </label><input class="Itxt" type="text" name="Lastname" placeholder="Lastname" value="<?php echo $row['Lastname']; ?>" readonly><br/><br/>
+    <label class="Ilbl">Username: &nbsp &nbsp &nbsp &nbsp &nbsp   </label><input class="Itxt" type="text" name="Username" placeholder="Username" value="<?php echo $row['Username']; ?>" readonly><br/><br/>
+    <label class="Ilbl">Email Address: &nbsp </label><input class="Itxt" type="text" name="Email" placeholder="Email" value="<?php echo $row['Email']; ?>" readonly><br/><br/>
+    <label class="Ilbl">User Type: &nbsp &nbsp &nbsp &nbsp &nbsp</label><input class="Itxt" type="text" name="Usertype" placeholder="Usertype" value="<?php echo $row['Usertype']; ?>" readonly><br/><br/>
     </form>
 
     </div>
