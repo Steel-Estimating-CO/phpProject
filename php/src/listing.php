@@ -16,7 +16,12 @@ include ('includes/conn.inc.php');
     <title>Document</title>
 </head>
 <body>
-<div class="MenuBar"></div>
+<div class="MenuBar">
+    <div class="MenuOptions1" onclick="location.href='EstimatorHomepage.php'"><p class="MenuTxt">My Profile</p></div>
+    <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
+    <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
+    <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
+</div>
 <table class="Listings">
     <tr>
         <th>User ID &emsp;</th>

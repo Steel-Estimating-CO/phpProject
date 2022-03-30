@@ -13,15 +13,15 @@ include ('includes/conn.inc.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AdminLayout.css" type="text/css">
-    <link rel="stylesheet" href="indexLayout.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
-<ul class = "ul">
-  <li class ="li a"><a class="li" a href="Index.php">Index page</a></li>
-  <li class = "li a"><a href ="EstimatorHomepage.php"> Estimator Tab </a>
-</ul>
-<div class="MenuBar"></div>
+<div class="MenuBar">
+<div class="MenuOptions1" onclick="location.href='EstimatorHomepage.php'"><p class="MenuTxt">My Profile</p></div>
+    <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
+    <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
+    <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
+</div>
 
 <?php
 if($numRows > 0){

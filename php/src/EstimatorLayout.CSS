@@ -1,0 +1,203 @@
+html{
+    background-color: white;
+    height: 100%;
+}
+
+.MenuBar{
+    height: 100vh;
+    width: 40vh;
+    background-color: rgb(77, 85, 97);
+    border: 1px solid black;
+    float: left;
+    margin-left: -8px;
+    margin-top: -10px;
+}
+
+.InfoBoxes{
+    height: 25vh;
+    width: 25vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.ProfilePic{
+    height: 35vh;
+    width: 30vh;
+    border: 1px solid black;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background-image: url("userpicture.png");
+    background-color: #cccccc;
+    background-size: 110px;
+}
+
+.ProfileInfo{
+    height: 65vh;
+    width: 80vh;
+    float: left;
+    margin-top: 30px;
+}
+
+.ProfileDesc{
+    height: 40vh;
+    width: 73vh;
+    border: 1px solid black;
+    float: right;
+    margin-top: 10vh;
+    margin-right: 20px;
+}
+
+.RowZero{
+    color: grey;
+    font-size: 15vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.RowExtends{
+    color: blue;
+    font-size: 15vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.AdminInfo{
+    font-size: 3vh;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.NewUserTable{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 10px 35px;
+}
+
+.NewUserHeader{
+    margin-left: 45vh;
+    margin-top: -1px;
+    font-size: 5vh;
+    color: rgb(94, 94, 94);
+}
+
+.MenuOptions1{
+    margin-top: 200px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions{
+    margin-top: 10px;
+    height: 7vh;
+    width: 40vh;
+    font-size: 3vh;
+    text-align: center;
+    color: rgb(111, 110, 157);
+}
+
+.MenuOptions1:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuOptions:hover{
+    background-color: rgb(55, 60, 69);
+    cursor: pointer;
+}
+
+.MenuTxt{
+    padding-top: 10px;
+}
+
+.CTemplate{
+    height: 85vh;
+    width: 150vh;
+    border: 1px solid black;
+    margin-left: 310px;
+    text-align: center;
+}
+
+.DescBox{
+    height: 30vh;
+    width: 130vh;
+    margin-left: 70px;
+    margin-top: -15px;
+    border: 1px solid black;
+}
+
+.CInfo{
+    font-size: 20px;
+}
+
+.MenuTitle
+{
+        font-size: 30px;
+        margin-top: 15px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+}
+
+.ClientInfo{
+    color: rgb(47, 0, 255);
+    margin-top: -20px;
+}
+
+.ClientSubject{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.ClientSub{
+    text-align: left;
+    padding-left: 5px;
+}
+
+.CompOption{
+    height: 10vh;
+    width: 35vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.CompOption:hover{
+    cursor: pointer;
+    background-color: rgb(186, 186, 186);
+}
+
+.CompText{
+    margin-top: 25px;
+    font-size: 3vh;
+}
+
+.Itxt{
+    height: 30px;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(106, 106, 106);
+    font-size: 18px;
+}
+
+.Ilbl{
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
