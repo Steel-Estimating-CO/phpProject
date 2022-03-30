@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="MenuBar">
-    <p class = "MenuOptions"> Estimator </p> <!--Fix this CSS tomorrow to work with MenuHeader-->
     <div class="MenuOptions1" onclick="location.href='EstimatorHomepage.php'"><p class="MenuTxt">My Profile</p></div>
     <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
     <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
