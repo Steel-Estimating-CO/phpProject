@@ -1,7 +1,7 @@
 <?php
 include ('includes/conn.inc.php');
 $stmt = $mysqli->prepare("SELECT UserID, Firstname, Lastname, Username, Email, Usertype, Auth FROM Users");
-$stmt->execute(); 
+$stmt->execute();
 $stmt->bind_result($UserID, $Firstname, $Lastname, $Username, $Email, $Usertype, $Auth);
 ?>
 
@@ -31,48 +31,57 @@ $stmt->bind_result($UserID, $Firstname, $Lastname, $Username, $Email, $Usertype,
 <p class="NewUserHeader">New Users:</p>
 <table class="NewUserTable">
     <tr>
+        <th>Id Number &emsp;</th>
         <th>First Name &emsp;</th>
         <th>Last Name &emsp;</th>
         <th>Username &emsp;</th>
         <th>Email Address &emsp;</th>
         <th>User Type &emsp;</th>
-        <th>Authenticated &emsp;</th>
     </tr>
-    <?php
 
-        while ($stmt->fetch()) 
+    <div class="SearchBar">
+        <form action="" method="GET">
+            <div class="input-group mb-3">
+            <input type="text" class="searchbar" name="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>" class="form-control" placeholder="Search...">
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </div>
+
+    </div>
+
+<?php
+    include ('includes/conn.inc.php');
+    if(isset($_GET['search']))
+    {
+        $filtervalues = $_GET['search'];
+        $query = "SELECT * FROM Users WHERE CONCAT(Firstname, Lastname, Username, Email, Usertype) LIKE '%$filtervalues%'";
+        $query_run = mysqli_query($mysqli, $query);
+    
+        if(mysqli_num_rows($query_run) > 0)
         {
-            if ($Auth == 0)
+            foreach($query_run as $items)
             {
-            echo "<tr>";
-            echo "<td> &emsp; $Firstname </td>";
-            echo "<td> &emsp; $Lastname </td>";
-            echo "<td> &emsp; $Username </td>";
-            echo "<td>  $Email </td>";
-            echo "<td>  $Usertype </td>";
-            echo "<td>";
-
-            echo "<Form action=\"process/acceptdecline.php\" method=\"post\">";
-            echo "<select class=\"UserOptions\" name=\"Auth\">";
-                echo "<option value=\"1\"";
-                if($Auth == 1){
-                    echo " selected";
-                }
-                echo ">Accept</option>";
-                echo "<option value=\"-1\"";
-                if($Auth == 0){
-                    echo " selected";
-                }
-                echo ">Decline</option>";
-                echo "</option>";
-                echo "</select>";
-                echo "<input type=\"hidden\" name=\"UserID\" value=\"$UserID\">";
-                echo "<input type=\"submit\">";
-                echo "</form>";
-            echo "</td>";
-            echo "</tr>"; 
+            ?>
+                <tr>
+                <td><?= $items['userID']; ?></td>
+                <td><?= $items['Firstname']; ?></td>
+                <td><?= $items['Lastname']; ?></td>
+                <td><?= $items['Username']; ?></td>
+                <td><?= $items['Email']; ?></td>
+                <td><?= $items['Usertype']; ?></td>
+                </tr>
+                <?php
             }
         }
+    }
+    else
+    {
+        ?>
+            <tr>
+                <td colspan="6">No Record Found</td>
+            </tr>
+        <?php
+    }
     ?>
 </table>
 

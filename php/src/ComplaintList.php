@@ -18,7 +18,18 @@ $stmt->fetch();
 </head>
 <body>
 
-<div class="MenuBar"></div>
+<div class="MenuBar">
+    <div class="ProfilePic1"></div>
+    <p class="namer">Steve Alright</p>
+    <p class="roler">(Admin)</p>
+    <div class="MenuOptions1" onclick="location.href='AdminHomepage.php'"><p class="MenuTxt">My Profile</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminAccountSettings.php'"><p class="MenuTxt">Account Settings</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminNewUsers.php'"><p class="MenuTxt">User Approvals</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminUserList.php'"><p class="MenuTxt">User List</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminNewComplaint.php'"><p class="MenuTxt">User Complaints</p></div>
+    <div class="MenuOptions"><p class="MenuTxt">Payments</p></div>
+    <div class="MenuOptions"><p class="MenuTxt">New Listings</p></div>
+    </div>
 <p class="NewUserHeader">User Complaint:</p>
 <div class="CTemplate">
 <?php
@@ -50,7 +61,7 @@ $stmt->fetch();
 ?>
 
 
-<div class="CompOption"><p class="CompText">Send Email</p></div>
+<div class="CompOption2"><p class="CompText">Send Email</p></div>
 
 <?php
     echo "<Form action=\"process/ResolvedUnresolved.php\" method=\"post\" id=\"unresolveForm\">";
@@ -60,7 +71,7 @@ $stmt->fetch();
     if($Complete == 2){
         $newCompleteVal = 2;
     }
-    echo "<div class=\"CompOption\"><p class=\"CompText\" id=\"UnresolvedBtn\">UnResolved</p></div>";
+    echo "<div class=\"CompOption3\"><p class=\"CompText\" id=\"UnresolvedBtn\">UnResolved</p></div>";
     echo "<input type=\"hidden\" name=\"CaseID\" value=\"$CaseID\">";
     echo "<input type=\"hidden\" name=\"Complete\" value=\"$newCompleteVal\">";
     echo "</form>";
