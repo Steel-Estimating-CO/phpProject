@@ -14,6 +14,8 @@
         <h2>Estimator Login</h2>
         <p>Please fill in your credentials to login.</p>
 
+        <?= isset($alert) ? $alert->fire_alert() : '' ?>
+
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -29,8 +31,9 @@
                 <label>Password</label>
                 <input type="password" name="Password" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group d-flex justify-content-between align-items-center">
                 <input type="submit"class="btn btn-primary" value="Login">
+                <a href="register.php">Create new account ?</a>
             </div>
         </form>
     </div>
