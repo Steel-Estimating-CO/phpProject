@@ -27,11 +27,22 @@ $stmt->store_result();
 </head>
 <body>
 
-<div class="MenuBar"></div>
+<div class="MenuBar">
+    <div class="ProfilePic1"></div>
+    <p class="namer">Steve Alright</p>
+    <p class="roler">(Admin)</p>
+    <div class="MenuOptions1" onclick="location.href='AdminHomepage.php'"><p class="MenuTxt">My Profile</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminAccountSettings.php'"><p class="MenuTxt">Account Settings</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminNewUsers.php'"><p class="MenuTxt">User Approvals</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminUserList.php'"><p class="MenuTxt">User List</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminNewComplaint.php'"><p class="MenuTxt">User Complaints</p></div>
+    <div class="MenuOptions"><p class="MenuTxt">Payments</p></div>
+    <div class="MenuOptions"><p class="MenuTxt">New Listings</p></div>
+    </div>
 <p class="NewUserHeader">New Complaint:</p>
 
 <form action="" method="get" id="filterForm">
-<select name="Filter" id="Filter">
+<select name="Filter" id="Filter" class="filter">
         <option value="All" <?php echo ($filter == "All") ? 'selected' : ''; ?>>All Complaints</option>
         <option value="JobPosting" <?php echo ($filter == "JobPosting") ? 'selected' : ''; ?>>Job Posting</option>
         <option value="Payments" <?php echo ($filter == "Payments") ? 'selected' : ''; ?>>Payments</option>

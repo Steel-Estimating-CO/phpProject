@@ -34,11 +34,14 @@ $numOfRows = $stmt->num_rows;
     <title>Admin Homepage</title>
 </head>
 <body>
-    <div class="MenuBar">
+<div class="MenuBar">
+    <div class="ProfilePic1"></div>
+    <p class="namer">Steve Alright</p>
+    <p class="roler">(Admin)</p>
     <div class="MenuOptions1" onclick="location.href='AdminHomepage.php'"><p class="MenuTxt">My Profile</p></div>
     <div class="MenuOptions" onclick="location.href='AdminAccountSettings.php'"><p class="MenuTxt">Account Settings</p></div>
     <div class="MenuOptions" onclick="location.href='AdminNewUsers.php'"><p class="MenuTxt">User Approvals</p></div>
-    <div class="MenuOptions"><p class="MenuTxt">User List</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminUserList.php'"><p class="MenuTxt">User List</p></div>
     <div class="MenuOptions" onclick="location.href='AdminNewComplaint.php'"><p class="MenuTxt">User Complaints</p></div>
     <div class="MenuOptions"><p class="MenuTxt">Payments</p></div>
     <div class="MenuOptions"><p class="MenuTxt">New Listings</p></div>

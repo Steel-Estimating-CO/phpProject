@@ -1,0 +1,53 @@
+body, html{
+    background-color: white;
+    height: 100%;
+
+    background-image: url('hdbackground.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputbox{
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    width: 500px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+}
+
+.input{
+    height: 30px;
+    width: 300px;
+}
+
+.word{
+    margin-left: -230px;
+    font-weight: bold;
+}
+
+.btn{
+    height: 40px;
+    width: 200px;
+    margin-top: 40px;
+    background-color: rgb(165, 165, 165);
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(135, 135, 135);
+}
+
+.ut{
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.sec{
+    margin-left: 540px;
+    color: white;
+    font-weight: bold;
+    font-size: 42px;
+}
