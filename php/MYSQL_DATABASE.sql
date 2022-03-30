@@ -22,6 +22,46 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `userID` int NOT NULL,
+  `Firstname` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Lastname` varchar(40) NOT NULL,
+  `Email` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Username` varchar(40) NOT NULL,
+  `Usertype` varchar(40) NOT NULL,
+  `Auth` tinyint DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`userID`, `Firstname`, `Lastname`, `Email`, `Username`, `Usertype`, `Auth`) VALUES
+(55, 'dsad', 'sada', 'asdads@dasas', 'asdass', 'Customer', -1),
+(56, 'cscds', 'dcsc', 'cdscsdcsd@dcs', 'dcsdsfsdfd', 'Customer', 1),
+(57, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
+(58, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
+(59, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
+(60, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', 0),
+(61, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
+(62, '', '', '', '', 'Customer', -1),
+(63, '', '', '', '', 'Customer', -1),
+(64, '', '', '', '', 'Customer', -1),
+(65, '', '', '', '', 'Customer', -1),
+(66, '', '', '', '', 'Customer', -1),
+(67, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', -1),
+(68, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
+(69, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
+(70, 'Matt', 'dasas', 'lol@gmail.com', 'haha', 'Customer', 0),
+(71, 'Matt', 'dasas', 'dasdsad@dsadas', 'haha', 'Customer', 0),
+(72, '', '', '', '', 'Customer', -1),
+(73, '', '', '', '', 'Customer', -1);
+
 --
 -- Table structure for table `Listings`
 --
@@ -31,7 +71,7 @@ CREATE TABLE `Listings` (
   `Type` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Claimed` tinyint DEFAULT '0',
-  `estimatorID` int,
+  `estimatorID` int NOT NULL,
   PRIMARY KEY (listingID),
   FOREIGN KEY (userID) REFERENCES Users(userID)
   FOREIGN KEY (estimatorID) REFERENCES Users(userID)
@@ -67,38 +107,6 @@ INSERT INTO `Complaints` (`caseID`, `UserID`, `UserDate`, `UserEmail`, `Category
 (5, 3454, '2022-03-10', 'ewefewfew@gfgdgd', 'JobPosting', 'frefer', 0);
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `Users`
---
-
-CREATE TABLE `Users` (
-  `userID` int NOT NULL,
-  `Firstname` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Lastname` varchar(40) NOT NULL,
-  `Email` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Username` varchar(40) NOT NULL,
-  `Usertype` varchar(40) NOT NULL,
-  `Auth` tinyint DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `Users`
---
-
-INSERT INTO `Users` (`userID`, `Firstname`, `Lastname`, `Email`, `Username`, `Usertype`, `Auth`) VALUES
-(55, 'dsad', 'sada', 'asdads@dasas', 'asdass', 'Customer', -1),
-(56, 'cscds', 'dcsc', 'cdscsdcsd@dcs', 'dcsdsfsdfd', 'Customer', 1),
-(57, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(58, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(59, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(60, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer',  0),
-(61, 'ewrew', 'fewfwf', 'fwfwfewf@fgrffdsf', 'fewfewe', 'Customer', -1),
-(67, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', -1),
-(68, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
-(69, 'edcadc', 'ccds', 'dscs@fssdfdscsd', 'cdscsdsc', 'Customer', 0),
-(70, 'Matt', 'dasas', 'lol@gmail.com', 'haha', 'Customer', 0),
-(71, 'Matt', 'dasas', 'dasdsad@dsadas', 'haha', 'Customer', 0);
 
 --
 -- Indexes for dumped tables
