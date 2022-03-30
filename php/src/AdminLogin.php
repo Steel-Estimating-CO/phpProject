@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <h2>Estimator Login</h2>
+        <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
 
         <?php 
@@ -20,7 +20,7 @@
         }        
         ?>
 
-        <Form method="post" action="EstimatorHomepage.php">
+        <Form method="post" action="AdminHomepage.php">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="Username" class="form-control">
