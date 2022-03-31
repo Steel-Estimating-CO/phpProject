@@ -27,7 +27,7 @@ $stmt->store_result();
     <div class="MenuOptions" onclick="location.href='CustomerActiveJobs.php'"><p class="MenuTxt">Active Job List</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerAcceptedJobs.php'"><p class="MenuTxt">Accepted Jobs</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerPrevJobs.php'"><p class="MenuTxt">Previous Jobs</p></div>
-    <div class="MenuOptions"><p class="MenuTxt">Send Payment</p></div>
+    <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Submit Complaint</p></div>
     </div>
 <p class="NewUserHeader">Previous Jobs:</p>
 <table class="NewUserTable">
@@ -40,7 +40,7 @@ $stmt->store_result();
     </tr>
     <?php
     include ('includes/conn.inc.php');
-    $sqli = "SELECT * FROM Listings WHERE userID=24 LIMIT 10";
+    $sqli = "SELECT * FROM Listings WHERE userID=24 AND Claimed=2 AND Claimed=3 LIMIT 10";
     $result = mysqli_query($mysqli, $sqli);
     $count = mysqli_num_rows($result);
 

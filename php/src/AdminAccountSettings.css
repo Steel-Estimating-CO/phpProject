@@ -73,7 +73,7 @@ html{
     width: 40vh;
     font-size: 3vh;
     text-align: center;
-    color: rgb(111, 110, 157);
+    color: rgb(255, 255, 255);
 }
 
 .MenuOptions{
@@ -82,7 +82,7 @@ html{
     width: 40vh;
     font-size: 3vh;
     text-align: center;
-    color: rgb(111, 110, 157);
+    color: rgb(255, 255, 255);
 }
 
 .MenuOptions1:hover{

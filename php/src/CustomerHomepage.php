@@ -45,7 +45,7 @@ $numOfRows = $stmt->num_rows;
     <div class="MenuOptions" onclick="location.href='CustomerActiveJobs.php'"><p class="MenuTxt">Active Job List</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerAcceptedJobs.php'"><p class="MenuTxt">Accepted Jobs</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerPrevJobs.php'"><p class="MenuTxt">Previous Jobs</p></div>
-    <div class="MenuOptions"><p class="MenuTxt">Send Payment</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerNewComplaint.php'"><p class="MenuTxt">Submit Complaint</p></div>
     </div>
 
     <div class="InfoBoxes">
