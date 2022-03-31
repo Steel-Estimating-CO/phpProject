@@ -228,3 +228,42 @@ body {
      overflow: hidden;
     }
 
+    table {
+        border-collapse:separate; 
+        border-spacing:10px;
+    }
+    
+    td {
+        text-align: left;
+        border: 1px solid black;
+        padding: 20px;
+        background-color:7A6132;
+     }
+
+     .mainCell
+     {
+        font-size:20px ;
+        border-left: 6px solid #ccc;
+        border-color: #2196F3!important;
+        background-color:#ddffff;
+     }
+
+     .marketplaceHeader
+     {
+        font-size: x-large;
+        font-weight: bold;
+        color: #2196F3;
+        text-align: center;
+     }
+
+     .tableButtons
+     {
+         border-style: hidden;
+     }
+
+     .tableheader{
+         border-style: hidden;
+         padding-bottom: 50px;
+         font-size: x-large;
+         font-color
+     }
