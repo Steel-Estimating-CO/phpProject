@@ -11,6 +11,7 @@
 <ul class = "ul">
   <li class ="li a"><a class="li" a href="LoginPage.php">Estimator Login</a></li>
   <li class ="li a"><a href="AdminLogin.php">Admin Login</a></li>
+  <li class ="li a"><a href="CustomerLogin.php">Client Login</a></li>
 </ul>
 </body>
 </html>
