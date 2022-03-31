@@ -17,7 +17,7 @@ $numRows = $stmt->num_rows;
 ?>
 <?php
 include ('includes/conn.inc.php');
-$stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed, estimatorID FROM Listings WHERE userID=24 AND Claimed=1");
+$stmt = $mysqli->prepare("SELECT listingID, userID, Type, Description, Claimed, estimatorID FROM Listings WHERE userID=24 AND Claimed=3");
 $stmt->execute();
 $stmt->bind_result($listingID, $userID, $Type, $Description, $Claimed, $estimatorID);
 $stmt->store_result();
@@ -42,8 +42,9 @@ $numOfRows = $stmt->num_rows;
     <div class="MenuOptions1" onclick="location.href='CustomerHomepage.php'"><p class="MenuTxt">My Profile</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerSettings.php'"><p class="MenuTxt">Account Settings</p></div>
     <div class="MenuOptions" onclick="location.href='CustomerJobPosting.php'"><p class="MenuTxt">Post a Job</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Active Job List</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Previous Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerActiveJobs.php'"><p class="MenuTxt">Active Job List</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerAcceptedJobs.php'"><p class="MenuTxt">Accepted Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerPrevJobs.php'"><p class="MenuTxt">Previous Jobs</p></div>
     <div class="MenuOptions"><p class="MenuTxt">Send Payment</p></div>
     </div>
 

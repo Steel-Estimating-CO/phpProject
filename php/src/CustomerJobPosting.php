@@ -24,14 +24,15 @@ if(isset($_GET))
 </head>
 <body>
 <div class="MenuBar">
-    <div class="ProfilePic1"></div>
+<div class="ProfilePic1"></div>
     <p class="namer">Matt Gaffoor</p>
     <p class="roler">(Customer)</p>
     <div class="MenuOptions1" onclick="location.href='CustomerHomepage.php'"><p class="MenuTxt">My Profile</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Account Settings</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Post a Job</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Active Job List</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Previous Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerSettings.php'"><p class="MenuTxt">Account Settings</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerJobPosting.php'"><p class="MenuTxt">Post a Job</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerActiveJobs.php'"><p class="MenuTxt">Active Job List</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerAcceptedJobs.php'"><p class="MenuTxt">Accepted Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerPrevJobs.php'"><p class="MenuTxt">Previous Jobs</p></div>
     <div class="MenuOptions"><p class="MenuTxt">Send Payment</p></div>
     </div>
 
@@ -39,20 +40,22 @@ if(isset($_GET))
     <h1 class="AccS">New Job Details:</h1>
 
     <form action="CustomerNewJob.php" method="POST">
-    <label class="IDlbl">User ID Number:</label><input class="Itxt" type="text" name="userID" placeholder="UserID" value="<?php echo $row['UserID']; ?>" readonly><br/><br/>
+    <label class="IDlbl">User ID Number:</label><input class="Itxt" type="text" name="userID" placeholder="userID" value="<?php echo $row['UserID']; ?>" readonly><br/><br/>
     
+    <label class="IDlbl">Job Title &nbsp &nbsp &nbsp</label><input class="IItxt" type="text" name="Title" placeholder="Job Title" required>
+
     <p class="ut">Select Job Type:</p><select name="Type" id="Type">
             <option value="Personal">Personal</option>
             <option value="Business">Business</option>
         </select>
 
-    <textarea class="tb" rows="4" cols="90" placeholder="Enter Text Here..." name="Description"></textarea>
-    </form>
-
+    <textarea class="tb" rows="4" cols="90" placeholder="Enter Text Here..." name="Description" required></textarea>
+    
     <div class="p-t-10">
         <button class="Subbtn" type="submit" name="submit" > Submit </button>
     </div>
-    
+
+    </form>
     </div>
 </div>
 </body>

@@ -41,14 +41,15 @@ if(isset($_POST['btn-update']))
 </head>
 <body>
 <div class="MenuBar">
-    <div class="ProfilePic1"></div>
+<div class="ProfilePic1"></div>
     <p class="namer">Matt Gaffoor</p>
     <p class="roler">(Customer)</p>
     <div class="MenuOptions1" onclick="location.href='CustomerHomepage.php'"><p class="MenuTxt">My Profile</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Account Settings</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Post a Job</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Active Job List</p></div>
-    <div class="MenuOptions" ><p class="MenuTxt">Previous Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerSettings.php'"><p class="MenuTxt">Account Settings</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerJobPosting.php'"><p class="MenuTxt">Post a Job</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerActiveJobs.php'"><p class="MenuTxt">Active Job List</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerAcceptedJobs.php'"><p class="MenuTxt">Accepted Jobs</p></div>
+    <div class="MenuOptions" onclick="location.href='CustomerPrevJobs.php'"><p class="MenuTxt">Previous Jobs</p></div>
     <div class="MenuOptions"><p class="MenuTxt">Send Payment</p></div>
     </div>
 
@@ -64,7 +65,7 @@ if(isset($_POST['btn-update']))
     <label class="Ilbl">Username: &nbsp &nbsp &nbsp   </label><input class="Itxt" type="text" name="Username" placeholder="Username" value="<?php echo $row['Username']; ?>"><br/><br/>
     <label class="Ilbl">Email Address:</label><input class="Itxt" type="text" name="Email" placeholder="Email" value="<?php echo $row['Email']; ?>"><br/><br/>
     <button type="submit" class="Sbtn" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
-    <a href="AdminHomepage.php"><button type="button" class="Cbtn" value="button">Cancel</button></a>
+    <a href="index.php"><button type="button" class="Cbtn" value="button">Sign Out</button></a>
     </form>
 <script>
     function update()

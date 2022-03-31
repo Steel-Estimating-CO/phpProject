@@ -76,7 +76,7 @@ html{
 
 
 .MenuOptions1{
-    margin-top: 60px;
+    margin-top: 40px;
     height: 7vh;
     width: 40vh;
     font-size: 3vh;
@@ -166,7 +166,16 @@ html{
 .Itxt{
     height: 30px;
     width: 300px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: rgb(106, 106, 106);
+    font-size: 18px;
+}
+
+.IItxt{
+    height: 30px;
+    width: 300px;
+    margin-left: 40px;
     margin-top: 20px;
     color: rgb(106, 106, 106);
     font-size: 18px;
@@ -209,12 +218,11 @@ html{
 }
 
 .AccS{
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
 .tb{
-    margin-top: 80px;
+    margin-top: 30px;
     height: 250px;
 }
 
@@ -245,4 +253,24 @@ textarea {
 .Subbtn:hover{
     cursor: pointer;
     background-color: rgb(135, 135, 135);
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 10px 35px;
+}
+
+.NewUserHeader{
+    margin-left: 45vh;
+    margin-top: -1px;
+    font-size: 5vh;
+    color: rgb(94, 94, 94);
+}
+
+.Cjobs{
+    background-color: rgba(0, 89, 0, 0.365);
+}
+
+.Rjobs{
+    background-color: rgba(255, 0, 0, 0.228);
 }
