@@ -23,7 +23,7 @@ include ('includes/conn.inc.php');
         <p class="word">User ID Number: </p><input class="input" type="number" placeholder="User ID" name="UserID" required="" oninvalid="this.setCustomValidity('Found on your profile page')"
                                                                                                                                 oninput="setCustomValidity('')">
         </div>
-    </div>
+        </div>
         <div class="input-group">
         <p class="word1">Today's Date: </p><input class="input" type="date" placeholder="Date" name="UserDate" required>
         </div>

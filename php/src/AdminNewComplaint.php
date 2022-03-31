@@ -28,7 +28,7 @@ $stmt->store_result();
 <body>
 
 <div class="MenuBar">
-    <div class="ProfilePic1"></div>
+<div class="ProfilePic1"></div>
     <p class="namer">Steve Alright</p>
     <p class="roler">(Admin)</p>
     <div class="MenuOptions1" onclick="location.href='AdminHomepage.php'"><p class="MenuTxt">My Profile</p></div>
@@ -37,7 +37,7 @@ $stmt->store_result();
     <div class="MenuOptions" onclick="location.href='AdminUserList.php'"><p class="MenuTxt">User List</p></div>
     <div class="MenuOptions" onclick="location.href='AdminNewComplaint.php'"><p class="MenuTxt">User Complaints</p></div>
     <div class="MenuOptions"><p class="MenuTxt">Payments</p></div>
-    <div class="MenuOptions"><p class="MenuTxt">New Listings</p></div>
+    <div class="MenuOptions" onclick="location.href='AdminNewListings.php'"><p class="MenuTxt">Active Listings</p></div>
     </div>
 <p class="NewUserHeader">New Complaint:</p>
 
