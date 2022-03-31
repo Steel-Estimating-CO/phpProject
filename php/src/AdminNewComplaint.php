@@ -59,6 +59,13 @@ $stmt->store_result();
     </tr>
     <?php
 
+    include ('includes/conn.inc.php');
+    $sqli = "SELECT * FROM Complaints WHERE Complete=0";
+    $result = mysqli_query($mysqli, $sqli);
+    $count = mysqli_num_rows($result);
+
+    if ($count > 0)
+    {
         while ($stmt->fetch()) 
         {
             if ($Complete == 0)
@@ -82,6 +89,13 @@ $stmt->store_result();
                 echo "</tr>"; 
             }
         }
+    }
+    else
+    {
+        echo "<tr>";
+            echo "<td colspan=\"6\">No Records Found!</td>";
+        echo "</tr>";
+    }
     ?>
 </table>
 
