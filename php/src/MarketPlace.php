@@ -12,7 +12,7 @@ include ('includes/conn.inc.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="AdminLayout.css" type="text/css">
+    <link rel="stylesheet" href="EstimatorLayout.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
@@ -25,25 +25,17 @@ include ('includes/conn.inc.php');
 
 <?php
 if($numRows > 0){
-?>
-<table class="Listings">
-    <tr>
-        <th>Listing ID &emsp;</th>
-        <th>User ID &emsp;</th>
-        <th>Type &emsp;</th>
-        <th>Description &emsp;</th>
-    </tr>
+?> 
+<table class ="spacing-table">
+        <th class = "tableheader"> Marketplace </th>
     <?php
 
         while ($stmt->fetch()) 
         {
             echo "<tr>";
-            echo "<td> &emsp; $listingID </td>";
-            echo "<td> &emsp; $userID </td>";
-            echo "<td> &emsp; $Type </td>";
-            echo "<td> &emsp; $Description </td>";
-            echo "<td><a href=\"listing.php?listingID=$listingID\">View</a></td>";
-            echo "<td><form action=\"process/claim.php\" method=\"post\">";
+            echo "<td class = mainCell> &emsp; $listingID  &emsp; $userID  &emsp; $Type &emsp; $Description</td>";
+            echo "<td class = tableButtons><a href=\"listing.php?listingID=$listingID\"><button>view</button></a></td>";
+            echo "<td class = tableButtons><form class = tablebuttons form action=\"process/claim.php\" method=\"post\">";
             echo "<input type=\"hidden\" name=\"Claimed\" value=\"1\">";
             echo "<input type=\"hidden\" name=\"userID\" value=\"$userID\">";
             echo "<input type=\"submit\" value=\"Claim\">";
