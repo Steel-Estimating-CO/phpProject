@@ -8,7 +8,7 @@ include ('includes/conn.inc.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Complaintsstyle.css" type="text/css">
+    <link rel="stylesheet" href="CustomerComplaintStyle.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +17,7 @@ include ('includes/conn.inc.php');
     Steel Estimating <br>
     </h1>
     <h2 class="title">Complaint Info</h2>
-                        <form action="AdminComplaints.php" method="POST">
+                        <form action="CustomerComplaints.php" method="POST">
     <div class="wrap-input100" >
         <div class="input-group">
         <p class="word">User ID Number: </p><input class="input" type="number" placeholder="User ID" name="UserID" required="" oninvalid="this.setCustomValidity('Found on your profile page')"

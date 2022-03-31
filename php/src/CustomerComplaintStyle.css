@@ -1,0 +1,64 @@
+body, html{
+    background-color: rgb(255, 114, 7);
+    height: 100%;
+}
+
+.inputbox{
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
+    width: 700px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+}
+
+.input{
+    height: 30px;
+    width: 350px;
+}
+
+.word{
+    margin-left: -240px;
+    font-weight: bold;
+}
+
+.word1{
+    margin-left: -260px;
+    font-weight: bold;
+}
+
+.btn{
+    height: 40px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: rgb(199, 199, 199);
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(135, 135, 135);
+}
+
+.ut{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.sec{
+    margin-left: 540px;
+    color: white;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.tb{
+    margin-top: 30px;
+    height: 150px;
+}
+
+textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none;
+}
