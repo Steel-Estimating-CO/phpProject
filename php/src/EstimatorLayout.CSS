@@ -4,14 +4,21 @@ html{
 }
 
 .MenuBar{
-    height: 100vh;
+    height: 105vh;
     width: 40vh;
-    background-color: rgb(77, 85, 97);
+    background-color: #C7902A;
     border: 1px solid black;
     float: left;
     margin-left: -8px;
     margin-top: -10px;
 }
+
+.MenuHeader{
+    font-size: 5vh;
+    text-align: center;
+    color: rgb(253, 253, 253);
+}
+
 
 .InfoBoxes{
     height: 25vh;
@@ -37,8 +44,8 @@ html{
 .ProfileInfo{
     height: 65vh;
     width: 80vh;
-    float: left;
-    margin-top: 30px;
+    margin-left: 100px;
+    float:left;
 }
 
 .ProfileDesc{
@@ -58,13 +65,14 @@ html{
 
 .RowExtends{
     color: blue;
-    font-size: 15vh;
+    font-size: 5vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .AdminInfo{
     font-size: 3vh;
     margin-top: 15px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
@@ -90,12 +98,12 @@ td, th{
 }
 
 .MenuOptions1{
-    margin-top: 200px;
+    margin-top: 20px;
     height: 7vh;
     width: 40vh;
     font-size: 3vh;
     text-align: center;
-    color: rgb(111, 110, 157);
+    color: #7A6132;
 }
 
 .MenuOptions{
@@ -104,7 +112,7 @@ td, th{
     width: 40vh;
     font-size: 3vh;
     text-align: center;
-    color: rgb(111, 110, 157);
+    color: #7A6132;
 }
 
 .MenuOptions1:hover{
@@ -200,4 +208,23 @@ td, th{
     margin-left: 50px;
     padding: 10px 20px;
     font-weight: bold;
+}   
+
+.ProfilePic1{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-image: url("userpicture.png");
+    background-color: #cccccc;
+    background-size: 110px;
 }
+
+body {
+     height: 100%; 
+     overflow: hidden;
+    }
+

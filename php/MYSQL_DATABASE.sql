@@ -71,7 +71,7 @@ CREATE TABLE `Listings` (
   `Type` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Claimed` tinyint DEFAULT '0',
-  `estimatorID` int NOT NULL,
+  `estimatorID` int ,
   PRIMARY KEY (listingID),
   FOREIGN KEY (userID) REFERENCES Users(userID),
   FOREIGN KEY (estimatorID) REFERENCES Users(userID)
@@ -80,7 +80,6 @@ CREATE TABLE `Listings` (
 INSERT INTO `Listings` (`listingID`, `userID`, `Type`, `Description`, `Claimed`) VALUES 
 (2412, 23, 'private', '300 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a house', 0),
 (2354, 24, 'business', '1000 meter area that needs steal beams every 20 meters, I need estimations for how much steel is required for solid beams that can support up to 5 floors.', 0);
---
 -- Table structure for table `Complaints`
 --
 
