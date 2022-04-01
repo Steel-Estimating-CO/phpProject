@@ -112,7 +112,7 @@ td, th{
     width: 40vh;
     font-size: 3vh;
     text-align: center;
-    color: #ffffff;
+    color: #fffefd;
 }
 
 .MenuOptions1:hover{
@@ -265,5 +265,4 @@ body {
          border-style: hidden;
          padding-bottom: 50px;
          font-size: x-large;
-         font-color
      }

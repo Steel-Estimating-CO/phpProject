@@ -24,7 +24,8 @@ include ('includes/conn.inc.php');
     <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
     <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
     <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
-    </div>
+    <div class="MenuOptions" onclick="location.href='EstimatorAccountSettings.php'"><p class="MenuTxt">Account Settings</p></div>
+    </div> 
 <table>
     <tr>
         <th class = "tableheader">Listing ID &emsp;</th>

@@ -79,8 +79,8 @@ CREATE TABLE `Listings` (
 
 INSERT INTO `Listings` (`listingID`, `userID`, `Type`, `Description`, `Claimed`) VALUES 
 (2412, 23, 'private', '300 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a house', 0),
-(2523, 23, 'private', '300 meter squared area, need to estimate how much steel is required to reinforce the interior walls for a house', 0),
-(253, 24, 'private', '300 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a house', 0),
+(2523, 23, 'business', '250 meter squared area, need to estimate how much steel is required to reinforce the interior walls for a cafe', 0),
+(253, 24, 'private', '20 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a shed', 0),
 (2354, 24, 'business', '1000 meter area that needs steal beams every 20 meters, I need estimations for how much steel is required for solid beams that can support up to 5 floors.', 0);
 -- Table structure for table `Complaints`
 --
