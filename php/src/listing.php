@@ -12,29 +12,31 @@ include ('includes/conn.inc.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="AdminLayout.css" type="text/css">
+    <link rel="stylesheet" href="EstimatorLayout.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
 <div class="MenuBar">
+    <p class ="MenuHeader"> Estimator </p>
+    <div class ="ProfilePic1"> </div>
+    <p class = "AdminInfo">Matthew Gaffor </p>
     <div class="MenuOptions1" onclick="location.href='EstimatorHomepage.php'"><p class="MenuTxt">My Profile</p></div>
     <div class="MenuOptions" onclick="location.href='EstimatorCurrent.php'"><p class="MenuTxt">Current Job</p></div>
     <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
     <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
-</div>
-<table class="Listings">
+    </div>
+<table class="spacing-table">
     <tr>
-        <th>User ID &emsp;</th>
-        <th>Type &emsp;</th>
-        <th>Description &emsp;</th>
+        <th class = "tableheader">Listing ID &emsp;</th>
+        <th class = "tableheader">Type &emsp;</th>
+        <th class = "tableheader">Description &emsp;</th>
     </tr>
     <?php
 
             echo "<tr>";
-            echo "<td> &emsp; $listingID </td>";
-            echo "<td> &emsp; $userID </td>";
-            echo "<td> &emsp; $Type </td>";
-            echo "<td> &emsp; $Description </td>";
+            echo "<td class = mainCell> &emsp; $listingID </td>";
+            echo "<td class = mainCell> &emsp; $Type </td>";
+            echo "<td class = mainCell> &emsp; $Description </td>";
             echo "</tr>";
             ?>
 </body>

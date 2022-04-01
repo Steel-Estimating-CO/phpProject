@@ -62,3 +62,13 @@ textarea {
     height: 100px;
     resize: none;
 }
+
+.exit
+{
+    background-color:red;
+}
+
+.exit:hover
+{
+    background-color:darkred;
+}

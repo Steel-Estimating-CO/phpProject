@@ -27,16 +27,16 @@ include ('includes/conn.inc.php');
     </div>
 <table>
     <tr>
-        <th>Type &emsp;</th>
-        <th>Description &emsp;</th>
-        <th>Files </th>
+        <th class = "tableheader">Listing ID &emsp;</th>
+        <th class = "tableheader">Type &emsp;</th>
+        <th class = "tableheader">Description &emsp;</th>
     </tr>
     <?php
 
             echo "<tr>";
-            echo "<td> &emsp; $listingID </td>";
-            echo "<td> &emsp; $userID </td>";
-            echo "<td> &emsp; $Type </td>";
+            echo "<td class = mainCell> 253 </td>";
+            echo "<td class = mainCell> private </td>";
+            echo "<td class = mainCell> 300 meter squared area, need to estimate how much steel is required to reinforce the exterior walls for a house </td>";
             echo "</tr>";
             ?>
 </body>

@@ -16,6 +16,10 @@ include ('includes/conn.inc.php');
     <h1>
     Steel Estimating <br>
     </h1>
+    <form>
+        <input type="button" class = "exit" value="Go back!" onclick="history.back()">
+    </form>
+
     <h2 class="title">Complaint Info</h2>
                         <form action="AdminComplaints.php" method="POST">
     <div class="wrap-input100" >

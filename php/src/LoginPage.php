@@ -1,5 +1,4 @@
 <?php
-include ('includes/conn.inc.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -17,15 +16,6 @@ session_start();
     <div class="wrapper">
         <h2>Estimator Login</h2>
         <p>Please fill in your credentials to login.</p>
-
-        <?= isset($alert) ? $alert->fire_alert() : '' ?>
-
-        <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
-        ?>
-
         <Form method="post" action="LoginPage.php">
             <div class="form-group">
                 <label>Username</label>

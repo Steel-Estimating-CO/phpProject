@@ -19,14 +19,16 @@
     <div class="MenuOptions" onclick="location.href='MarketPlace.php'"><p class="MenuTxt">Marketplace</p></div>
     <div class="MenuOptions" onclick="location.href='NewComplaint.php'"><p class="MenuTxt">Complaints & Questions</p></div>
     </div>
+    <div class="ProfileInfo"> 
+        <p class = "AdminInfo">Info:</p> 
+        <p class = "AdminInfo">Email: mattg@gmail.com</p> 
+        <p class = "AdminInfo">Registration date: 27/03/2022</p> 
+</div>
     <div class="InfoBoxes">
         <p class ="AdminInfo"> Jobs completed </p>
         <print class ="RowExtends"> 5 </print>
     </div>
         <div class="ProfilePic">
         </div>
-    <div class="ProfileInfo"> 
-        <p class = "AdminInfo">Email: mattg@gmail.com | Registration date: 27/03/2022  </p> 
-</div>
 </body>
 </html>

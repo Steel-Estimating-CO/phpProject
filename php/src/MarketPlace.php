@@ -29,6 +29,7 @@ include ('includes/conn.inc.php');
 <?php
 if($numRows > 0){
 ?> 
+
 <table class ="spacing-table">
         <th class = "tableheader"> Marketplace </th>
     <?php
@@ -36,7 +37,7 @@ if($numRows > 0){
         while ($stmt->fetch()) 
         {
             echo "<tr>";
-            echo "<td class = mainCell> &emsp; $listingID  &emsp; $userID  &emsp; $Type &emsp; $Description</td>";
+            echo "<td class = mainCell> &emsp; $listingID  &emsp; $Type &emsp; $Description</td>";
             echo "<td class = tableButtons><a href=\"listing.php?listingID=$listingID\"><button>view</button></a></td>";
             echo "<td class = tableButtons><form class = tablebuttons form action=\"process/claim.php\" method=\"post\">";
             echo "<input type=\"hidden\" name=\"Claimed\" value=\"1\">";
