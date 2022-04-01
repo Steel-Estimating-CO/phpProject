@@ -19,6 +19,17 @@ html{
     color: rgb(253, 253, 253);
 }
 
+.MenuBarindex
+{
+    height: 105vh;
+    width: 40vh;
+    background-color: darkblue ;
+    border: 1px solid black;
+    float: left;
+    margin-left: -8px;
+    margin-top: -10px;
+}
+
 
 .InfoBoxes{
     height: 25vh;

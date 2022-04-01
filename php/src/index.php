@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="MenuBar">
+<div class="MenuBarindex">
     <p class ="MenuHeader"> Homepage </p>
     <div class="MenuOptions1" onclick="location.href='LoginPage.php'"><p class="MenuTxt">Estimator Login</p></div>
     <div class="MenuOptions" onclick="location.href='AdminLogin.php'"><p class="MenuTxt">Admin Login</p></div>
