@@ -10,5 +10,5 @@ $_POST['UserSubject']);
 $stmt->execute();
 $newId = $stmt->insert_id;
 $stmt->close();
-header("Location: EstimatorHomepage.php");
+header("Location: AdminHomepage.php");
 ?>

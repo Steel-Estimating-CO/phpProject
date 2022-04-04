@@ -31,7 +31,6 @@
             </div>
             <div class="form-group">
                 <input type="submit"class="btn btn-primary" value="Login">
-                <a href="register.php">Create new account ?</a>
             </div>
         </form>
     </div>

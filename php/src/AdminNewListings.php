@@ -48,7 +48,7 @@
 
     if ($count > 0)
     {
-        while ($stmt->fetch()) 
+        while ($stmt->fetch())
         {
             if ($Claimed == 0)
             {
@@ -58,7 +58,7 @@
                     echo "<td> &emsp; $Type </td>";
                     echo "<td> &emsp; $Title </td>";
                     echo "<td>  $Description </td>";
-                    echo "<td>";   
+                    echo "<td>";
                     echo "<Form action=\"process/rejectlisting.php\" method=\"post\" id=\"removeListing\">";
                     if($Claimed == 0){
                         $newClaimedVal = 4;
@@ -68,7 +68,7 @@
                     echo "<input type=\"hidden\" name=\"Claimed\" value=\"$newClaimedVal\">";
                     echo "</form>";
                     echo "</td>";
-                    echo "</tr>"; 
+                    echo "</tr>";
             }
             else if ($Claimed == 1)
             {
@@ -88,7 +88,7 @@
                     echo "<input type=\"hidden\" name=\"Claimed\" value=\"$newClaimedVal\">";
                     echo "</form>";
                     echo "</td>";
-                    echo "</tr>"; 
+                    echo "</tr>";
             }
         }
     }
